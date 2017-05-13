@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Complains;
+use App\Complain;
 use Illuminate\Http\Request;
 
 class ComplainsController extends Controller
@@ -15,6 +15,7 @@ class ComplainsController extends Controller
     public function index()
     {
         //
+        return "Here a list of all the complains will be displayed";
     }
 
     /**
@@ -25,6 +26,7 @@ class ComplainsController extends Controller
     public function create()
     {
         //
+        return "Show a form for someone that add a new complain for a roomate";
     }
 
     /**
@@ -36,50 +38,56 @@ class ComplainsController extends Controller
     public function store(Request $request)
     {
         //
+        return "Complain saved to db";
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Complains  $complains
+     * @param  \App\Complain  $complain
      * @return \Illuminate\Http\Response
      */
-    public function show(Complains $complains)
+    public function show(Complain $complain)
     {
         //
+        return "Display an specific complain";
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Complains  $complains
+     * @param  \App\Complain  $complain
      * @return \Illuminate\Http\Response
      */
-    public function edit(Complains $complains)
+    public function edit(Complain $complain)
     {
         //
+        return "Complains will only be able to be eddited by the author, missing that";
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Complains  $complains
+     * @param  \App\Complain  $complain
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Complains $complains)
+    public function update(Request $request, Complain $complain)
     {
         //
+        return "Saving edit to db";
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Complains  $complains
+     * @param  \App\Complain  $complain
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Complains $complains)
+    public function destroy(Complain $complain)
     {
         //
+        return "deleting complain, probably should not happen so we can keep track of the complains";
     }
 }
