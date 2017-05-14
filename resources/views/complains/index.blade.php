@@ -21,7 +21,7 @@
     <div class="row justify-content-md-center">
         <div class="col col-lg-6">
             <div class="card ovf-hidden">
-                @if (!empty($complain->image))
+                @if (!empty($complain->image_path))
                     <!--Card image-->
                     <div class="view overlay hm-white-slight">
                         <img src="img/complain_img/{{$complain->image_path}}" class="img-fluid" alt="">

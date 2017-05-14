@@ -17,6 +17,7 @@ class CreateComplainsTable extends Migration
             $table->increments('id');
             $table->integer('roommate_id')->unsigned();
             $table->boolean('finished');
+            $table->string('image_path');
             $table->integer('votes');
             $table->string('title');
             $table->longText('description');

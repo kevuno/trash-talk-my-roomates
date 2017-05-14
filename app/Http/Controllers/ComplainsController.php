@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Complain;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class ComplainsController extends Controller
 {
@@ -15,7 +16,7 @@ class ComplainsController extends Controller
     public function index()
     {
         //
-        $complains = Complain::all();
+        $complains = Complain::all()->sortByDesc("updated_at");;
         return view('complains.index',['complains' => $complains]);
     }
 
@@ -27,7 +28,8 @@ class ComplainsController extends Controller
     public function create()
     {
         //
-        return "Show a form for someone that add a new complain for a roomate";
+        $roomates = \App\Roomate::all();
+        return view('complains.create',['roomates' => $roomates]);
     }
 
     /**
@@ -38,8 +40,20 @@ class ComplainsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return "Complain saved to db";
+        //dd($request);
+        $complain = new Complain();
+        $imageNameWithPath = Carbon::now()->format('Y-m-d H-M').'-'.$request->image_path->getClientOriginalName();
+        $request->image_path->move(public_path('img/complain_img'), $imageNameWithPath);
+        foreach($request->except(['_token','image_path']) as $key => $value){
+            $complain->setAttribute($key, $value);
+        }
+        $complain->image_path = $imageNameWithPath;
+        $complain->finished = false;
+        $complain->votes = 0;
+        $complain->save();
+        return redirect()->route('complains.index')
+            ->with('success','Image Uploaded successfully.')
+            ->with('path',$imageNameWithPath);
     }
 
     /**

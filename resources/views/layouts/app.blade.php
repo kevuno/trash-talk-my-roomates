@@ -106,6 +106,8 @@
     <!--Init WOW-->
     <script>
         new WOW().init();
+        $('.mdb-select').material_select();
+
     </script>     
   </body>
 </html>

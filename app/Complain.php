@@ -8,6 +8,6 @@ class Complain extends Model
 {
     // A complain belongs to a Roomate
     function roomate(){
-    	return $this->hasMany('App\Roomate');
+    	return $this->belongsTo('App\Roomate');
     }
 }
