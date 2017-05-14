@@ -33,9 +33,17 @@
                 @endif
 
                 <!--Card content-->
-                <div class="card-block">
-                    <!--Social shares button-->
-                    <a class="activator"><i class="fa fa-share-alt"></i></a>
+                <div class="card-block" id="{{$complain->id}}/">
+                    
+                    <div class="row">
+                        <div class="col">
+                            Upvotes: {{$complain->votes}}
+                        </div>
+                        <div class="col">
+                            <!--Upvote button-->
+                            <a class="up_vote" href="complains/{{$complain->id}}/up_vote"><i class="fa fa-arrow-up"></i>Upvote</a>
+                        </div>
+                    </div>
                     <!--Title-->
                     <h3 class="card-title">{{$complain->roomate}}</h3>
                     <h4 class="card-title">{{$complain->title}}</h4>
