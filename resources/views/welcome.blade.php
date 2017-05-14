@@ -7,6 +7,9 @@
         <div class="title m-b-md">
             Trash talk your roomates
         </div>
+        <div class="salty">
+            Made by a salty roomate
+        </div>
 
         <div class="links">
             <a href="{{route('about') }}">About</a>

@@ -96,18 +96,12 @@ main{
     justify-content: center;
 }
 
-.position-ref {
-    position: relative;
-}
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
-}
-
-.content {
-    text-align: center;
+.salty{
+    float: right;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    
 }
 
 .title {

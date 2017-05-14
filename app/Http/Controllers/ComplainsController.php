@@ -15,7 +15,8 @@ class ComplainsController extends Controller
     public function index()
     {
         //
-        return "Here a list of all the complains will be displayed";
+        $complains = Complain::all();
+        return view('complains.index',['complains' => $complains]);
     }
 
     /**

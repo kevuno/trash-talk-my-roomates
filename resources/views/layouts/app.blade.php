@@ -27,11 +27,11 @@
 <body>
         <div class="page-container">
         <!--Navbar-->
-        <nav class="secondary-color-dark navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar wow fadeIn">
+        <nav class="danger-color navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar wow fadeIn">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 Trash talk my roomates xd
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -68,7 +68,6 @@
             <!--Social buttons-->
             <div class="social-section wow fadeIn" data-wow-delay="0.3s">
                 <ul>
-                    <li><a href="https://www.facebook.com/kevin.bastian.lol" target="_blank" class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
                     <li><a href="https://twitter.com/realDonaldTrump" target="_blank" class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
                     <li><a href="https://github.com/kevuno/trash-talk-my-roomates" target="_blank" class="btn-floating btn-small btn-git"><i class="fa fa-github"> </i></a></li>
                 </ul>
