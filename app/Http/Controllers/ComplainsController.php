@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Complain;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class ComplainsController extends Controller
 {
@@ -28,7 +29,7 @@ class ComplainsController extends Controller
     public function create()
     {
         //
-        $roomates = \App\Roomate::all();
+        $roomates = \App\Roommate::all();
         return view('complains.create',['roomates' => $roomates]);
     }
 
@@ -50,7 +51,23 @@ class ComplainsController extends Controller
         $complain->image_path = $imageNameWithPath;
         $complain->finished = false;
         $complain->votes = 0;
+        
+        //Send email
+        $title = $request->title;
+        $content = $request->description;
+        // Mail::send('emails.send', ['title' => $title, 'content' => $content], function ($message){
+
+        //     $message->from('kevinbastianperez@gmail.com', 'Kevin Bastian');
+
+        //     $message->to("kevinbastianperez@gmail.com");
+
+        // });
+        Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message){
+            $message->to('johndoe@gmail.com');
+        });
+
         $complain->save();
+
         return redirect()->route('complains.index')
             ->with('success','Image Uploaded successfully.')
             ->with('path',$imageNameWithPath);

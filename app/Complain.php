@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Complain extends Model
 {
+
     // A complain belongs to a Roomate
-    function roomate(){
-    	return $this->belongsTo('App\Roomate');
+    function roommate(){
+    	return $this->belongsTo('App\Roommate');
     }
 }

@@ -1,5 +1,6 @@
 /node_modules
 /public/hot
+/public/img/complain_img/*
 /public/storage
 /storage/*.key
 /vendor

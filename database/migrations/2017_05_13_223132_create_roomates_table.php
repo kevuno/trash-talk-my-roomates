@@ -13,7 +13,7 @@ class CreateRoomatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roomates', function (Blueprint $table) {
+        Schema::create('roommates', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();

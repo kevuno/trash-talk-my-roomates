@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <!--Title-->
-                    <h3 class="card-title">{{$complain->roomate}}</h3>
+                    <h3 class="card-title">{{$complain->roommate->name}}</h3>
                     <h4 class="card-title">{{$complain->title}}</h4>
 
                     <hr>
